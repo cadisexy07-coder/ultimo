@@ -29,4 +29,6 @@ export interface Flight {
   arrivalTime: string;
   duration: string;
   price: number;
+  status: 'On Time' | 'Delayed' | 'Cancelled' | 'Scheduled';
+  availableDays: number[]; // Novo campo: Array de 0 (Domingo) a 6 (Sábado)
 }
