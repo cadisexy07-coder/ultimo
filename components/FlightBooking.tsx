@@ -514,7 +514,7 @@ const FlightBooking: React.FC = () => {
                                     <select 
                                         value={passengerData.title}
                                         onChange={(e) => handlePassengerChange('title', e.target.value)}
-                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900"
                                     >
                                         <option value="">Selecione...</option>
                                         <option value="Mr">Sr. (Homem)</option>
@@ -531,7 +531,7 @@ const FlightBooking: React.FC = () => {
                                         required 
                                         value={passengerData.firstName}
                                         onChange={(e) => handlePassengerChange('firstName', e.target.value)}
-                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900 placeholder-gray-500"
                                         placeholder="Introduza um nome próprio"
                                     />
                                     <p className="text-xs text-gray-400 mt-1">Indique o seu nome próprio</p>
@@ -544,7 +544,7 @@ const FlightBooking: React.FC = () => {
                                         required 
                                         value={passengerData.lastName}
                                         onChange={(e) => handlePassengerChange('lastName', e.target.value)}
-                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900 placeholder-gray-500"
                                         placeholder="Introduza um apelido"
                                     />
                                     <p className="text-xs text-gray-400 mt-1">Indique o seu apelido</p>
@@ -552,7 +552,7 @@ const FlightBooking: React.FC = () => {
 
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">Género*</label>
-                                    <div className="flex space-x-0 border border-gray-300 rounded-md overflow-hidden">
+                                    <div className="flex space-x-0 border border-gray-300 rounded-md overflow-hidden bg-white">
                                         <button 
                                             type="button"
                                             onClick={() => handlePassengerChange('gender', 'male')}
@@ -577,7 +577,7 @@ const FlightBooking: React.FC = () => {
                                         required
                                         value={passengerData.birthDate}
                                         onChange={(e) => handlePassengerChange('birthDate', e.target.value)}
-                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900"
                                     />
                                 </div>
                             </div>
@@ -594,7 +594,7 @@ const FlightBooking: React.FC = () => {
                                     <select 
                                         value={passengerData.ffProgram}
                                         onChange={(e) => handlePassengerChange('ffProgram', e.target.value)}
-                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900"
                                     >
                                         <option value="Umbi Umbi">Umbi Umbi (TAAG)</option>
                                         <option value="TAP Miles&Go">TAP Miles&Go</option>
@@ -608,7 +608,7 @@ const FlightBooking: React.FC = () => {
                                         type="text" 
                                         value={passengerData.ffNumber}
                                         onChange={(e) => handlePassengerChange('ffNumber', e.target.value)}
-                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900 placeholder-gray-500"
                                         placeholder="Introduza um número de passageiro frequente"
                                     />
                                 </div>
@@ -631,7 +631,7 @@ const FlightBooking: React.FC = () => {
                                             required
                                             value={passengerData.nationality}
                                             onChange={(e) => handlePassengerChange('nationality', e.target.value)}
-                                            className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                            className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900 placeholder-gray-500"
                                         />
                                     </div>
                                     <div>
@@ -641,7 +641,7 @@ const FlightBooking: React.FC = () => {
                                             required
                                             value={passengerData.docNumber}
                                             onChange={(e) => handlePassengerChange('docNumber', e.target.value)}
-                                            className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                            className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900 placeholder-gray-500"
                                             placeholder="O número do seu documento"
                                         />
                                     </div>
@@ -652,7 +652,7 @@ const FlightBooking: React.FC = () => {
                                             required
                                             value={passengerData.docExpiry}
                                             onChange={(e) => handlePassengerChange('docExpiry', e.target.value)}
-                                            className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                            className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900"
                                         />
                                     </div>
                                     <div>
@@ -662,7 +662,7 @@ const FlightBooking: React.FC = () => {
                                             required
                                             value={passengerData.issuingCountry}
                                             onChange={(e) => handlePassengerChange('issuingCountry', e.target.value)}
-                                            className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                            className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900 placeholder-gray-500"
                                         />
                                     </div>
                                 </div>
@@ -682,7 +682,7 @@ const FlightBooking: React.FC = () => {
                                         required
                                         value={passengerData.email}
                                         onChange={(e) => handlePassengerChange('email', e.target.value)}
-                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900 placeholder-gray-500"
                                         placeholder="Introduza um endereço de e-mail"
                                     />
                                 </div>
@@ -693,7 +693,7 @@ const FlightBooking: React.FC = () => {
                                         required
                                         value={passengerData.confirmEmail}
                                         onChange={(e) => handlePassengerChange('confirmEmail', e.target.value)}
-                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                        className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900 placeholder-gray-500"
                                         placeholder="Confirme um endereço de e-mail"
                                     />
                                 </div>
@@ -710,7 +710,7 @@ const FlightBooking: React.FC = () => {
                                                 type="text" 
                                                 value={passengerData.countryCode}
                                                 onChange={(e) => handlePassengerChange('countryCode', e.target.value)}
-                                                className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                                className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900"
                                             />
                                         </div>
                                         <div>
@@ -720,7 +720,7 @@ const FlightBooking: React.FC = () => {
                                                 required
                                                 value={passengerData.phoneNumber}
                                                 onChange={(e) => handlePassengerChange('phoneNumber', e.target.value)}
-                                                className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border"
+                                                className="w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 py-2.5 px-3 border bg-white text-gray-900 placeholder-gray-500"
                                                 placeholder="Introduza um telemóvel"
                                             />
                                         </div>
@@ -743,7 +743,7 @@ const FlightBooking: React.FC = () => {
                                         required
                                         checked={passengerData.consent}
                                         onChange={(e) => handlePassengerChange('consent', e.target.checked)}
-                                        className="focus:ring-amber-500 h-4 w-4 text-amber-600 border-gray-300 rounded"
+                                        className="focus:ring-amber-500 h-4 w-4 text-amber-600 border-gray-300 rounded bg-white"
                                     />
                                 </div>
                                 <div className="ml-3 text-sm">
