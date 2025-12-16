@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ setView }) => {
         setView(view);
         if (isMobile) setIsMenuOpen(false);
       }}
-      className="text-white hover:text-amber-300 transition-colors duration-300 py-2 px-3 rounded-md text-sm font-medium"
+      className="text-white hover:text-amber-300 transition-colors duration-300 py-2 px-3 rounded-md text-sm font-bold uppercase tracking-wide"
     >
       {label}
     </button>
@@ -37,12 +37,12 @@ const Header: React.FC<HeaderProps> = ({ setView }) => {
   
   const ServicesDropdown: React.FC<{ isMobile?: boolean }> = ({ isMobile = false }) => (
     <div className="relative" onMouseEnter={() => !isMobile && setIsServicesOpen(true)} onMouseLeave={() => !isMobile && setIsServicesOpen(false)}>
-      <button onClick={() => isMobile && setIsServicesOpen(!isServicesOpen)} className="text-white hover:text-amber-300 transition-colors duration-300 py-2 px-3 rounded-md text-sm font-medium flex items-center">
+      <button onClick={() => isMobile && setIsServicesOpen(!isServicesOpen)} className="text-white hover:text-amber-300 transition-colors duration-300 py-2 px-3 rounded-md text-sm font-bold uppercase tracking-wide flex items-center">
         Serviços
         <svg className={`w-4 h-4 ml-1 transform transition-transform ${isServicesOpen ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
       </button>
       {isServicesOpen && (
-        <div className={`${isMobile ? 'static' : 'absolute'} z-20 ${isMobile ? 'pl-4' : 'bg-gray-800 rounded-md shadow-lg mt-1 w-48'}`}>
+        <div className={`${isMobile ? 'static' : 'absolute'} z-20 ${isMobile ? 'pl-4' : 'bg-gray-800 rounded-md shadow-lg mt-1 w-56'}`}>
           {servicesItems.map(item => (
             <button
               key={item.view}
@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ setView }) => {
                   setIsMenuOpen(false);
                 }
               }}
-              className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+              className="block w-full text-left px-4 py-3 text-xs font-medium uppercase tracking-wide text-gray-300 hover:bg-gray-700 hover:text-white border-b border-gray-700 last:border-0"
             >
               {item.label}
             </button>
@@ -67,12 +67,15 @@ const Header: React.FC<HeaderProps> = ({ setView }) => {
   return (
     <header className="bg-gray-900 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
-            <button onClick={() => setView(View.HOME)} className="flex items-center gap-3 group">
-              <div className="flex items-center">
-                <span className="text-white font-extrabold text-2xl tracking-tighter leading-none group-hover:text-gray-200 transition-colors">VICTÓRIA</span>
-                <span className="text-amber-500 font-bold text-2xl tracking-tight leading-none ml-2 group-hover:text-amber-400 transition-colors">EXPRESS</span>
+            <button onClick={() => setView(View.HOME)} className="flex items-center gap-4 group">
+              <div className="flex flex-col items-start">
+                <div className="flex items-baseline leading-none">
+                  <span className="text-white font-serif font-bold text-2xl tracking-wide group-hover:text-gray-200 transition-colors">VICTÓRIA</span>
+                  <span className="text-white font-serif font-bold text-2xl tracking-wide ml-2 group-hover:text-gray-200 transition-colors">EXPRESS</span>
+                </div>
+                <span className="text-[10px] text-amber-500 font-medium tracking-[0.2em] uppercase mt-1 group-hover:text-amber-400 transition-colors">Agência de Viagens Internacionais</span>
               </div>
             </button>
           </div>
